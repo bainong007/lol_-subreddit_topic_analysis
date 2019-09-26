@@ -1,0 +1,99 @@
+
+
+
+<body>
+<style>
+div.relative {
+  position: relative;
+  left: 30px;
+<!-- top: 80px; -->
+}
+body {background-color: black;
+    }
+table#cm {
+color: white;
+}
+table#sc {
+color: white;
+}
+
+</style>
+
+
+<div class="relative">
+    <div style="width: 100%; overflow: hidden;">
+
+        <div style="width: 700px; float: right;margin-top: 350px;margin-right: 100px">
+    {% for table in table1 %}
+            {{ table|safe }}
+    {% endfor %}
+    </div>
+    <div style="margin-left: 20px;">
+    <h1><font color="White">Topic Modeling using keywords</font></h1>
+    <p ><font color="White">Based on League of Legends Subreddit Comments </font></p>
+<form action="/topic">
+
+<p ><font color="White"> From </font></p>
+
+<table class="tool hf-table date-input"><tbody><tr><td id="hf-h1"><font color="White">Mon</font></td>
+    <td id="hf-h2"><font color="White">Day</font></td><td id="hf-h3"><font color="White">Yr</font></td></tr><tr>
+    <td id="hf-d1"><input class="dateform month" autocomplete="off" type="text" size="2" maxlength="2" value="1" name="mm" aria-label="Month"><span class="datesep">/</span></td>
+    <td id="hf-d2"><input class="dateform day" autocomplete="off" type="text" size="2" maxlength="2" value="1" name="dd" aria-label="Day"><span class="datesep">/</span></td>
+    <td id="hf-d3"><input class="dateform year" autocomplete="off" type="text" size="4" maxlength="4" value="2019" name="yyyy" aria-label="Year"><span class="datesep">&nbsp;</span></td></tr></tbody></table>
+
+<p ><font color="White"> To </font></p>
+
+<table class="tool hf-table date-input"><tbody><tr><td id="hf-h1"><font color="White">Mon</font></td>
+    <td id="hf-h2"><font color="White">Day</font></td><td id="hf-h3"><font color="White">Yr</font></td></tr><tr>
+    <td id="hf-d1"><input class="dateform month" autocomplete="off" type="text" size="2" maxlength="2" value="1" name="mm" aria-label="Month"><span class="datesep">/</span></td>
+    <td id="hf-d2"><input class="dateform day" autocomplete="off" type="text" size="2" maxlength="2" value="1" name="dd" aria-label="Day"><span class="datesep">/</span></td>
+    <td id="hf-d3"><input class="dateform year" autocomplete="off" type="text" size="4" maxlength="4" value="2019" name="yyyy" aria-label="Year"><span class="datesep">&nbsp;</span></td></tr></tbody></table>
+<br>
+
+<br>
+
+
+
+      <br><font color="White">
+      Topic 1
+      </font><br>
+      <input type="text" name="topic10"><input type="text" name="topic11"><input type="text" name="topic12">
+
+      <br><font color="White">
+      Topic 2
+      </font><br>
+      <input type="text" name="topic20"><input type="text" name="topic21"><input type="text" name="topic22">
+
+      <br><font color="White">
+      Topic 3
+      </font><br>
+      <input type="text" name="topic30"><input type="text" name="topic31"><input type="text" name="topic32">
+
+      <br><font color="White">
+      Topic 4
+      </font><br>
+      <input type="text" name="topic40"><input type="text" name="topic41"><input type="text" name="topic42">
+
+     <br><font color="White">
+      Topic 5
+      </font><br>
+      <input type="text" name="topic50"><input type="text" name="topic51"><input type="text" name="topic52">
+
+  <br>
+  <input type="submit" value="Submit" method="get">
+
+</form>
+</div>
+
+
+<p style="font-size:25px"><font color="White">
+    Top Comments
+</font></p>
+
+{% for table in table2 %}
+            {{ table|safe }}
+{% endfor %}
+
+</div>
+
+</body>
